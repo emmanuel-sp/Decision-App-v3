@@ -1,0 +1,98 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #FFFCF7;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    margin: auto;
+    display: flex;
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.login {
+    display: flex;
+    grid-column: 4;
+    grid-row: 1;
+}
+.login button {
+    margin-left:auto;
+    margin-bottom: auto;
+    z-index: 1000;
+    overflow: hidden;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: #738290;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 10vh;
+    color: #A1B5D8;
+
+}
+
+.grid {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    right: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    background-color: transparent;
+}
+
+.reason_grid {
+    display: flex;
+}
+.fade-in {
+    animation: fadeIn 2s ease-in forwards; /* Adjust the duration (3s) as needed */
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.reason {
+    margin: auto;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: #A1B5D8;
+    border: none;
+}
+.reason_grid button:hover {
+    cursor: pointer;
+}
+
+.login button:hover {
+    cursor: pointer;
+    color: #A1B5D8;
+}
+@media (max-height: 350px) {
+    .title {
+        color: transparent;
+        font-size: 0;
+    }
+}
+
